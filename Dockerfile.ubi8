@@ -22,8 +22,10 @@ LABEL io.k8s.description="ubi8 OpenShift debug toolkit as a Pod." \
 RUN dnf install --disableplugin=subscription-manager -y \
         bind-utils \
         iputils \
+        iproute \
         procps-ng \
         lsof \
+        pciutils \
         nmap-ncat \
 	&& \
     dnf clean all -y
